@@ -1,33 +1,111 @@
-body {
-  font-family: Arial, sans-serif;
+:root {
+  --main-red: #b30000;
+  --red-accent: #ff4d4d;
+  --light-bg: #fff5f5;
+  --dark-text: #222;
+  --light-text: #fff;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
-  background-color: #f9f9f9;
-  color: #333;
+  padding: 0;
 }
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
 header {
-  background-color: #222;
-  color: white;
-  padding: 2rem;
+  background-color: var(--main-red);
+  color: var(--light-text);
+  padding: 4rem 0;
   text-align: center;
+  border-bottom: 5px solid var(--red-accent);
 }
-nav a {
-  color: #00ccff;
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+header nav {
+  margin-top: 1rem;
+}
+
+header nav a {
+  color: var(--light-text);
   margin: 0 1rem;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
-section {
-  padding: 2rem;
+
+header nav a:hover {
+  color: var(--red-accent);
 }
-.project {
-  border: 1px solid #ccc;
-  padding: 1rem;
+
+section h2 {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  border-radius: 10px;
-  background-color: white;
-}
-footer {
+  color: var(--main-red);
   text-align: center;
-  padding: 1rem;
-  background-color: #eee;
+}
+
+#about p,
+#contact p {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+}
+
+.project-card {
+  background: white;
+  padding: 1.5rem;
+  border-left: 6px solid var(--main-red);
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  transition: transform 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--main-red);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--main-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  background-color: var(--main-red);
+  color: var(--light-text);
+  text-align: center;
+  padding: 1rem 0;
   margin-top: 2rem;
+  font-size: 0.9rem;
 }
