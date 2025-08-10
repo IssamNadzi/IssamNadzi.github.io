@@ -228,34 +228,7 @@
             transform: translateX(5px);
         }
 
-        .add-project {
-            background: linear-gradient(145deg, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0.05));
-            border: 2px dashed rgba(255, 0, 0, 0.3);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 250px;
-            transition: all 0.4s ease;
-            cursor: pointer;
-        }
 
-        .add-project:hover {
-            background: linear-gradient(145deg, rgba(255, 0, 0, 0.15), rgba(255, 0, 0, 0.08));
-            border-color: rgba(255, 0, 0, 0.5);
-            transform: translateY(-5px);
-        }
-
-        .add-icon {
-            font-size: 3rem;
-            color: rgb(255, 0, 0);
-            margin-bottom: 1rem;
-            transition: transform 0.3s ease;
-        }
-
-        .add-project:hover .add-icon {
-            transform: rotate(90deg);
-        }
 
         .floating-particles {
             position: fixed;
@@ -351,12 +324,7 @@
                 </a>
             </div>
 
-            <!-- Add Project Card -->
-            <div class="project-card add-project">
-                <div class="add-icon">+</div>
-                <h3 class="project-title">Add New Project</h3>
-                <p class="project-description">Ready to showcase your next creation?</p>
-            </div>
+
         </div>
     </div>
 
@@ -382,11 +350,6 @@
         for (let i = 0; i < 5; i++) {
             setTimeout(createParticle, i * 1000);
         }
-
-        // Add click handler for add project card
-        document.querySelector('.add-project').addEventListener('click', function() {
-            alert('Here you can add logic to create a new project card or redirect to a form!');
-        });
 
         // Add smooth scroll behavior for any future navigation
         document.addEventListener('DOMContentLoaded', function() {
